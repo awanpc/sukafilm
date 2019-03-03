@@ -33,7 +33,8 @@ class Movie extends React.Component {
       vote_average,
       runtime,
       poster_path,
-      id
+      id,
+      vote_count
     } = this.state.movie;
 
     const year = release_date ? release_date.substring(0, 4) : null;
@@ -78,7 +79,11 @@ class Movie extends React.Component {
                 </h5>
                 <h5>
                   Rating:
-                  <span>{vote_average}</span>
+                  <span>{vote_average} / 10</span>
+                </h5>
+                <h5>
+                  Total Vote:
+                  <span>{vote_count}</span>
                 </h5>
                 <h5>
                   Runtime:
